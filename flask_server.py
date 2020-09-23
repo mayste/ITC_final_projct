@@ -16,9 +16,6 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict_t():
-    model = TFBertForSequenceClassification.from_pretrained('bert-base-uncased')
-    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-    model.load_weights('model.h5')
     message = request.form['message']
     tokenized = tokenizer(message)
     input_names = ['input_ids', 'token_type_ids', 'attention_mask']
@@ -36,6 +33,9 @@ def predict_t():
 if __name__ == "__main__":
     gdd.download_file_from_google_drive(file_id='1sM9RNmt4kxvyX97SxB1Zv-WMkjSxBpqH',
                                         dest_path='./model.h5')
+    model = TFBertForSequenceClassification.from_pretrained('bert-base-uncased')
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    model.load_weights('model.h5')
     port = os.environ.get('PORT')
     if port:
         app.run(host='0.0.0.0', port=int(port))
