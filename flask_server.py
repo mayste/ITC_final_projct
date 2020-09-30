@@ -22,10 +22,10 @@ def predict_t():
 
     logits = model.predict({k: np.array(tokenized[k])[None] for k in input_names})[0]
     scores = softmax(logits, axis=1)[:, 1]
-    if scores[0] >= (1-scores[0]):
-        return render_template('result.html', prediction=1)
+    if scores[0] >= (1 - scores[0]):
+        return render_template('result.html', prediction=1, variable=np.round(scores[0], 3))
     else:
-        return render_template('result.html', prediction=0)
+        return render_template('result.html', prediction=0, variable=np.round(1 - scores[0], 3))
 
 
 # new_tweet = "I hate black people, they are stupid and look like shit"

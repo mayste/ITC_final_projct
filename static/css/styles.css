@@ -26,6 +26,7 @@ header{
 			width:100%;
 			margin:0px;
 		}
+
 #brandname{
 	float:left;
 	font-size:30px;
@@ -39,6 +40,13 @@ header h2{
 
 }
 
+.center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+   -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 
 
 .btn-info {background-color: #2196F3;
