@@ -19,16 +19,14 @@ def predict_t():
     message = request.form['message']
     tokenized = tokenizer(message)
     input_names = ['input_ids', 'token_type_ids', 'attention_mask']
-
+    # TODO: ADD preprocessing like <user>, <url>
     logits = model.predict({k: np.array(tokenized[k])[None] for k in input_names})[0]
     scores = softmax(logits, axis=1)[:, 1]
     if scores[0] >= (1 - scores[0]):
-        return render_template('result.html', prediction=1, variable=np.round(scores[0], 3))
+        return render_template('result.html', prediction=1, variable=np.round(scores[0]*100, 3))
     else:
-        return render_template('result.html', prediction=0, variable=np.round(1 - scores[0], 3))
+        return render_template('result.html', prediction=0, variable=np.round((1 - scores[0])*100, 3))
 
-
-# new_tweet = "I hate black people, they are stupid and look like shit"
 
 if __name__ == "__main__":
     gdd.download_file_from_google_drive(file_id='1sM9RNmt4kxvyX97SxB1Zv-WMkjSxBpqH',

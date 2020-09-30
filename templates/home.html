@@ -15,17 +15,13 @@
 	</div>
 	</header>
 	<div class="ml-container">
-		 <div class="center">
 			<form action="{{ url_for('predict_t')}}" method="POST">
-			<p style="color:black;text-align: center;">Enter Your tweet Here:</p>
+			<p style="color:black;">Enter Your tweet Here:</p>
 			<!-- <input type="text" name="comment"/> -->
 			<textarea name="message" rows="4" cols="50"></textarea>
 			<br/>
-				<div class="center">
 					<input type="submit" class="btn-info" value="predict">
-				</div>
 			</form>
-		 </div>
 	</div>
 </body>
 </html>
