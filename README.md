@@ -94,3 +94,5 @@ In order to run our app you'll need to install all the following packages:
 git clone https://github.com/mayste/ITC_final_projct.git
 pip install -r requirments.txt
 ```
+
+You can find more informations about our researches and results in the Cyberbullying Detection Paper
