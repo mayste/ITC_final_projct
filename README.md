@@ -1,17 +1,17 @@
-## ITC final project
+# ITC final project
 
 In today’s society, Cyberbullying is a very important social issue that needs to be taken into consideration. Over the last years, almost 60% of children aged 10-17 have reported being bullied or harassed over the Internet and via social media outlets, but 90% of these victims will never report the incidents. 
 While we might think this phenomenon only affects individuals, business cyberbullying is also a serious problem. It can cause lost revenue, a decrease in employee morale and a downtick in a company’s persona and prestige.
 
 In this project we tried to deal with this issue. We use Natural Language Processing (NLP) tools to analyze text data, more precisely tweets, and detect cyberbullying posts. This may help twitter or companies to detect cyberbullying posts and block their diffusion for instance.
 
-# Project Structure:
+## Project Structure:
 
 ![image (1)](https://user-images.githubusercontent.com/66407270/94777264-d911d100-03cb-11eb-9b01-222d1683b798.png)
 
 In this GitHub you will find:
 
-# Datasets :
+## Datasets :
 
 - Hate speech : 9924 posts classified as hate speech or not.
 - Labeled-tweet : 11091 tweets classified are offensive and non-offensive
@@ -19,7 +19,7 @@ In this GitHub you will find:
 
 We combine the 3 of them in order to get a balanced dataset.
 
-# Notebooks:
+## Notebooks:
 
   - Cleaning_data: In this notebook we cleaned the dataset in order to use it when we ran the model
   - Cleaning_data_bert: This notebook is specific for the BERT Deep Learning model we replace the url, numbers, users with the tokens: 'url', 'number', 'user'.
@@ -27,7 +27,7 @@ We combine the 3 of them in order to get a balanced dataset.
   - Machine Learning Models: You will find the basics machine learning models we tried (SVM, Naive Bayes, Random Forest Classifier)
   - BERT Model with Transformers: This notebook present the BERT Deep Learning model we choose for the final deployment of our application.
 
-# Static/css & Templates
+## Static/css & Templates
 
 These files contains the designs we used for our application that you can run using the *flask_server.py* file. 
 Note: You need the procfile to run the app. The fisrt run will be slow as it downloads the pretrained weigths of the BERT model.
