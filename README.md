@@ -22,7 +22,7 @@ We combine the 3 of them in order to get a balanced dataset.
 # Notebooks:
 
   - Cleaning_data: In this notebook we cleaned the dataset in order to use it when we ran the model
-  - Cleaning_data_bert: This notebook is specific for the BERT Deep Learning model we replace the url, numbers, users with the tokens: '<url>', '<number>', '<user>'.
+  - Cleaning_data_bert: This notebook is specific for the BERT Deep Learning model we replace the url, numbers, users with the tokens: 'url', 'number', 'user'.
   - LSTM : We run a LSTM model on our dataset which achieve not a good result. The model overfit really quickly.
   - Machine Learning Models: You will find the basics machine learning models we tried (SVM, Naive Bayes, Random Forest Classifier)
   - BERT Model with Transformers: This notebook present the BERT Deep Learning model we choose for the final deployment of our application.
