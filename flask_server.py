@@ -19,7 +19,6 @@ def predict_t():
     message = request.form['message']
     tokenized = tokenizer(message)
     input_names = ['input_ids', 'token_type_ids', 'attention_mask']
-    # TODO: ADD preprocessing like <user>, <url>
     logits = model.predict({k: np.array(tokenized[k])[None] for k in input_names})[0]
     scores = softmax(logits, axis=1)[:, 1]
     if scores[0] >= (1 - scores[0]):
