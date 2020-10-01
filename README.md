@@ -1,4 +1,4 @@
-# ITC final project
+# ITC final project - Cyberbullying Detector
 
 In today’s society, Cyberbullying is a very important social issue that needs to be taken into consideration. Over the last years, almost 60% of children aged 10-17 have reported being bullied or harassed over the Internet and via social media outlets, but 90% of these victims will never report the incidents. 
 While we might think this phenomenon only affects individuals, business cyberbullying is also a serious problem. It can cause lost revenue, a decrease in employee morale and a downtick in a company’s persona and prestige.
